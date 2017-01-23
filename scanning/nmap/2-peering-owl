@@ -1,0 +1,19 @@
+#Peering Owl
+##Scanning -- Nmap -- Form2
+
+###Description
+The purpose of this form is to teach how to identify who else may be on your network whether friend or foe.
+
+The network will be listed as <###.##.#.0/24>. Replace the # with your target network. (ex. 192.168.0.0/24)
+
+###Execution
+We will first preform a scan that sends no packets.
+1>> **`nmap -sL <###.##.#.0/24>`**
+
+Next we can perform a skip port scan that will send packets but is more reliable
+2>> **`nmap -sP <###.##.#.0/24>`**
+
+###Explanation
+In step one we perform a no packet scan that uses reverse DNS lookup to try and find different machines on the network. 
+
+Since the scan in step one isn't always reliable we do a skip port scan witch will return all online machines on a network along with there ip addresses.
